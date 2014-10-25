@@ -13,19 +13,28 @@
 </head>
 <body>
 <div id="container" class="w960 center">
-    <div class="center mod_figures mod_figure_h mod_figure_h_175" ng-controller="TvListCtrl">
-        <ul class="figrues_list" ng-repeat="r in range(4)">
-            <li class="list_item" ng-repeat="c in range(5)" ng-init="tvProgram=tvList[r * 5 + c]">
-                <a _hot="tv.global.small_img1" tabindex="-1" class="figure" href="{{tvProgram.linkto}}" target="_blank" title="{{tvProgram.title}}">
-                    <img style="visibility: visible;" src="{{tvProgram.pic}}" alt="{{tvProgram.title}}"/>
-                    <span class="figure_mask"><em class="mask_txt">{{tvProgram.updateInfo}}</em></span>
-                </a>
-                <strong class="figure_title">
-                    <a href="{{tvProgram.linkto}}" target="_blank" title="{{tvProgram.title}}">{{tvProgram.title}}</a>
-                </strong>
-                <p class="figure_desc">{{tvProgram.desc}}</p>
-            </li>
-        </ul>
+    <div class="wrapper_main">
+        <div class="mod_hd">
+            <div class="mod_title">
+                <h2 class="title"><span class="text_medium">我的影视</span></h2>
+            </div>
+        </div>
+        <div class="mod_bd">
+            <div class="center mod_figures mod_figure_h mod_figure_h_175" ng-controller="TvListCtrl">
+                <ul class="figrues_list" ng-repeat="r in range(4)">
+                    <li class="list_item" ng-repeat="c in range(5)" ng-init="tvProgram=tvList[r * 5 + c]">
+                        <a _hot="tv.global.small_img1" tabindex="-1" class="figure" href="{{tvProgram.linkto}}" target="_blank" title="{{tvProgram.title}}">
+                            <img style="visibility: visible;" src="{{tvProgram.pic}}" alt="{{tvProgram.title}}"/>
+                            <span class="figure_mask"><em class="mask_txt">{{tvProgram.updateInfo}}</em></span>
+                        </a>
+                        <strong class="figure_title">
+                            <a href="{{tvProgram.linkto}}" target="_blank" title="{{tvProgram.title}}">{{tvProgram.title}}</a>
+                        </strong>
+                        <p class="figure_desc">{{tvProgram.desc}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 </body>
