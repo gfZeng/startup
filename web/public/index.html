@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/list.js"></script>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <title></title>
+</head>
+<body>
+<div id="container" class="w960 center">
+    <div>
+        <div ng-controller="ListCtrl">
+            <table class="center">
+                <tr ng-repeat="r in rows">
+                    <td ng-repeat="c in cols">
+                        <div ng-init="img=imgList[r * rowSize + c]">
+                            <div class="h_imgul2" ng-if="img != null">
+                                <div class="h_imgul2_p1">
+                                    <a href="{{img.linkto}}" target="_blank">
+                                        <img width="138" height="94" src="{{img.src}}" title="{{img.title}}"/>
+                                    </a>
+                                </div>
+                                <p class="fb fc0 lh24n "><a href="{{img.linkto}}" target="_blank" title="{{img.title}}">{{img.title}}</a></p>
+                                <p>均价：<span class="fchot ">{{img.price}}</span>元/㎡</p>
+                                <p class="lh24n ">{{img.desc}}</p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
