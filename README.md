@@ -4,7 +4,7 @@ FIXME
 
 ## 要求
 
-You will need [Leiningen][] 2.0.0 or above and [fly-develop][]installed.
+You will need [Leiningen][] 2.0.0 or above and [fly-develop][] installed.
 
 [leiningen]: https://github.com/technomancy/leiningen
 [fly-develop]: https://gihub.com/gfZeng/fly-develop

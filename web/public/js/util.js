@@ -1,3 +1,7 @@
+String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, "");
+};
+
 function range(start, end, step) {
     if (!end) {
         end = start;
